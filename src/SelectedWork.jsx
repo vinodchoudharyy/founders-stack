@@ -210,6 +210,25 @@ export const services = [
     cardFoot: "AWS · DEPLOYMENT · SUPPORT",
     pattern: "cloud",
   },
+  {
+    number: "12",
+    name: "FINTECH",
+    category: "12 / FINTECH SOLUTIONS",
+    icon: "account_balance",
+    iconAccent: "#a9f849",
+    title: "Fintech Solutions",
+    description:
+      "Build smarter financial experiences with secure, scalable, and modern fintech solutions designed for businesses and customers.",
+    deliverables: ["Digital Payment Integration", "Financial Management Systems", "Secure Banking & Transaction Solutions"],
+    mark: "₹",
+    accent: "#91c846",
+    visual: "project-northstar",
+    visualLabel: "Fintech solutions",
+    cardEyebrow: "FINANCE BUILT ON TRUST",
+    cardTitle: <>Smarter finance.<br />Built for trust.</>,
+    cardFoot: "PAYMENTS · FINANCE · SECURITY",
+    pattern: "software",
+  },
 ];
 
 function ServicePreview({ service }) {
@@ -235,7 +254,7 @@ function ServicePreview({ service }) {
           <span className="preview-graphic-lines"><i></i><i></i><i></i></span>
         </div>
       </div>
-      <div className="preview-status"><span><i></i> DIGITAL SOLUTIONS</span><span>{service.number} / 11</span></div>
+      <div className="preview-status"><span><i></i> DIGITAL SOLUTIONS</span><span>{service.number} / {services.length}</span></div>
     </div>
   );
 }
@@ -296,7 +315,7 @@ function ServiceDetailPage({ service, index, onBack, onNavigate, onContact }) {
           <span aria-hidden="true">←</span> All services
         </button>
         <a className="service-detail-wordmark" href="#home">FOUNDERSTACK <i>/</i> TECHNOLOGIES</a>
-        <span className="service-detail-count">{service.number} / 11</span>
+        <span className="service-detail-count">{service.number} / {services.length}</span>
       </header>
 
       <section className="service-detail-hero">
@@ -459,7 +478,7 @@ function SelectedWork() {
               <a className="fs-intro-link" href="#service-grid">Explore all services <span aria-hidden="true">→</span></a>
             </div>
             <div className="fs-stats" aria-label="FounderStack at a glance">
-              <div><span className="material-symbols-outlined" aria-hidden="true">bolt</span><strong>11</strong><small>Core services</small></div>
+              <div><span className="material-symbols-outlined" aria-hidden="true">bolt</span><strong>{services.length}</strong><small>Core services</small></div>
               <div><span className="material-symbols-outlined" aria-hidden="true">rocket_launch</span><strong>End-to-end</strong><small>Digital solutions</small></div>
               <div><span className="material-symbols-outlined" aria-hidden="true">hub</span><strong>One team</strong><small>From idea to launch</small></div>
             </div>
