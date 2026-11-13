@@ -9,7 +9,7 @@ import {
   updateProfile,
   GoogleAuthProvider,
 } from "firebase/auth";
-import { auth } from "./firebase.js";
+import { auth, isFirebaseConfigured } from "./firebase.js";
 
 function AccountPage() {
   const [mode, setMode] = useState("signup");
